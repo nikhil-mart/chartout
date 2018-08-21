@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:padding="@dimen/content_margin_lr"
+  android:background="@drawable/bg_round_white"
+  >
+
+  <de.hdodenhof.circleimageview.CircleImageView
+    android:id="@+id/hostImage"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:contentDescription="@string/host_image"
+    android:scaleType="centerCrop"
+    app:civ_circle_background_color="@android:color/darker_gray"/>
+
+  <LinearLayout
+    android:id="@+id/reviewer"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="@id/hostImage"
+    app:layout_constraintHorizontal_bias="0"
+    app:layout_constraintLeft_toRightOf="@id/hostImage"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="@id/hostImage">
+
+    <TextView
+      android:id="@+id/reviewerName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/mast"
+      android:textSize="@dimen/h2_textSize"
+      tools:text="Reviewer Name"
+      />
+    <TextView
+      android:id="@+id/location"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Bangalore"
+      android:textColor="@color/grey800"
+      android:textSize="12sp"
+      />
+
+  </LinearLayout>
+
+  <TextView
+    android:id="@+id/title"
+    android:textStyle="bold"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:text="Discover the party scene"
+    android:textSize="@dimen/h2_textSize"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/hostImage"/>
+
+  <me.zhanghai.android.materialratingbar.MaterialRatingBar
+    android:id="@+id/rating"
+    style="@style/RatingBar2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:minHeight="32dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/title"
+    />
+
+  <EditText
+    android:id="@+id/tv_rating"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:padding="6dp"
+    android:background="@drawable/bg_rect_trans"
+    android:gravity="start"
+    android:hint="Write something about your experience..."
+    android:maxLines="5"
+    android:minLines="5"
+    android:textSize="15sp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/rating"
+    />
+
+  <Button
+    android:id="@+id/btn_Submit"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:background="@drawable/bg_fround_green"
+    android:minHeight="0dp"
+    android:text="Submit"
+    android:textAllCaps="false"
+    android:textColor="@android:color/white"
+    android:textSize="@dimen/host_h1_textSize"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tv_rating"
+    />
+
+</android.support.constraint.ConstraintLayout>

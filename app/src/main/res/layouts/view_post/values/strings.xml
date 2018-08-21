@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="destination_1_s">Destination: %s</string>
+  <string name="available_to_book_with_me_1_s">Available to book with me - %s</string>
+  <string name="listed_locol">Listed on Locolhive.com - %s</string>
+</resources>

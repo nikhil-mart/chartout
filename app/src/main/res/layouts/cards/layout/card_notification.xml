@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/card_Notification"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="2dp"
+  android:clickable="true"
+  android:focusable="true"
+  android:orientation="vertical">
+
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="@dimen/content_margin_lr"
+    android:paddingRight="@dimen/content_margin_lr"
+    android:orientation="vertical"
+    >
+
+    <TextView
+      android:id="@+id/title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Notification Heading"
+      android:textSize="@dimen/viewListing_title_textSize"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintTop_toTopOf="parent"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/dot"
+      android:layout_width="10dp"
+      android:layout_height="10dp"
+      android:layout_marginLeft="12dp"
+      android:src="@android:color/transparent"
+      app:civ_circle_background_color="@color/red"
+      app:layout_constraintBottom_toBottomOf="@id/title"
+      app:layout_constraintHorizontal_bias="0"
+      app:layout_constraintLeft_toRightOf="@id/title"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="@id/title"/>
+
+    <TextView
+      android:id="@+id/content"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="6dp"
+      android:linksClickable="true"
+      android:text="@string/ipsem"
+      android:textSize="@dimen/toolbar_data_textSize"
+      app:layout_constraintTop_toBottomOf="@id/title"/>
+
+    <TextView
+      android:id="@+id/time"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="6dp"
+      android:text="4 hrs ago"
+      android:textSize="@dimen/sub_h2_textSize"
+      app:layout_constraintTop_toBottomOf="@id/content"/>
+  </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

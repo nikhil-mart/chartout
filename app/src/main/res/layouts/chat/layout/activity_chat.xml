@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/main_content"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fitsSystemWindows="true"
+  tools:context="com.locolhive.chartout.home.MainActivity">
+
+  <android.support.design.widget.AppBarLayout
+    android:id="@+id/appbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey300"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    >
+    <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="3dp"
+      android:paddingBottom="2dp"
+      app:layout_scrollFlags="enterAlways"
+      app:popupTheme="@style/AppTheme.PopupOverlay"
+      >
+
+      <android.support.constraint.ConstraintLayout
+        android:id="@+id/toolbar_contents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/toolbar_padding_right"
+        android:paddingRight="@dimen/toolbar_padding_right"
+        android:visibility="visible"
+        tools:ignore="RtlSymmetry">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+          android:id="@+id/hostImage"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:scaleType="centerCrop"
+          android:src="@drawable/pic_person"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+          android:id="@+id/hostName"
+          android:textStyle="bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="12dp"
+          android:ellipsize="end"
+          android:singleLine="true"
+          android:text="Person Name"
+          android:textSize="@dimen/host_h1_textSize"
+          app:layout_constraintBottom_toTopOf="@id/expName"
+          app:layout_constraintLeft_toRightOf="@id/hostImage"/>
+
+        <TextView
+          android:id="@+id/expName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="4dp"
+          android:layout_marginRight="4dp"
+          android:ellipsize="marquee"
+          android:singleLine="true"
+          android:text="Experience Name and Location"
+          app:layout_constraintBottom_toBottomOf="@id/hostImage"
+          app:layout_constraintHorizontal_bias="0"
+          app:layout_constraintLeft_toLeftOf="@id/hostName"/>
+
+      </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+  </android.support.design.widget.AppBarLayout>
+
+  <android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".chat.ActivityChat">
+
+    <android.support.v7.widget.RecyclerView
+      android:id="@+id/reyclerview_message_list"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:paddingBottom="12dp"
+      android:paddingLeft="6dp"
+      android:paddingRight="6dp"
+      app:layout_constraintBottom_toTopOf="@id/layout_chatbox"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+      android:layout_width="0dp"
+      android:layout_height="2dp"
+      android:layout_marginBottom="0dp"
+      android:background="#dfdfdf"
+      app:layout_constraintBottom_toTopOf="@+id/layout_chatbox"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"/>
+    <LinearLayout
+      android:id="@+id/layout_chatbox"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:background="#ffffff"
+      android:minHeight="48dp"
+      android:orientation="horizontal"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent">
+
+      <EditText
+        android:id="@+id/edittext_chatbox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:hint="Enter message"
+        android:inputType="textMultiLine"
+        android:maxLines="6"/>
+
+      <Button
+        android:id="@+id/button_chatbox_send"
+        android:layout_width="64dp"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="@string/send"
+        android:textSize="16sp"/>
+
+    </LinearLayout>
+
+  </android.support.constraint.ConstraintLayout>
+
+</android.support.design.widget.CoordinatorLayout>

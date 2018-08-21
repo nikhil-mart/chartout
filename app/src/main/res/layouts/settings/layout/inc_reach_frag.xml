@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginLeft="@dimen/content_margin_lr"
+  android:layout_marginRight="@dimen/content_margin_lr"
+  android:orientation="vertical"
+  android:layout_gravity="center"
+  tools:context=".settings.ChangeMobileNum">
+
+  <ImageView
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_gravity="center_horizontal"
+    android:src="@drawable/ic_ad_color"/>
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32dp"
+    android:text="@string/ipsem"
+    android:textSize="@dimen/h3_textSize"/>
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="18dp"
+    android:text="Contact us at"
+    android:textSize="@dimen/h2_textSize"/>
+  <TextView
+    android:textStyle="bold"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="chartoutapp@gmail.com"
+    android:textSize="@dimen/host_h1_textSize"/>
+  <TextView
+    android:id="@+id/locol"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="18dp"
+    android:text="Visit Locolhive website as Chartout is part of Locolhive"
+    android:textSize="18sp"/>
+
+</LinearLayout>

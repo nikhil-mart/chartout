@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+  <android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="3dp">
+
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <LinearLayout
+        android:id="@+id/options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:visibility="visible"
+        >
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Do you want to upload a new video or add link to an existing youtube video?"
+          android:textSize="17sp"
+          />
+
+        <Button
+          android:id="@+id/btn_url"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:paddingTop="6dp"
+          android:paddingBottom="6dp"
+          android:paddingLeft="16dp"
+          android:paddingRight="16dp"
+          android:background="@drawable/bg_fround_trans_black"
+          android:minHeight="0dp"
+          android:text="Existing Youtube Video"
+          android:textAllCaps="false"
+          android:textColor="@color/grey600"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/line"
+          />
+
+        <Button
+          android:id="@+id/btn_up"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:paddingTop="6dp"
+          android:paddingBottom="6dp"
+          android:paddingLeft="16dp"
+          android:paddingRight="16dp"
+          android:background="@drawable/bg_fround_trans_mast"
+          android:minHeight="0dp"
+          android:text="Upload New Video"
+          android:textAllCaps="false"
+          android:textColor="@color/mast"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/line"
+          />
+
+      </LinearLayout>
+      <LinearLayout
+        android:id="@+id/form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Enter a valid youtube video url:"
+          android:textSize="17sp"
+          />
+
+        <EditText
+          android:id="@+id/et_url"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:paddingTop="6dp"
+          android:paddingBottom="6dp"
+          android:paddingLeft="16dp"
+          android:paddingRight="16dp"
+          android:background="@drawable/bg_rect_white_padding"
+          android:hint="http://"
+          android:inputType="textUri"
+          android:minHeight="0dp"
+          android:textColor="@color/grey600"
+          android:textSize="15sp"
+          />
+
+        <Button
+          android:id="@+id/btn_add"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:paddingTop="6dp"
+          android:paddingBottom="6dp"
+          android:paddingLeft="16dp"
+          android:paddingRight="16dp"
+          android:background="@drawable/bg_fround_trans_mast"
+          android:minHeight="0dp"
+          android:text="Add Video"
+          android:textAllCaps="false"
+          android:textColor="@color/mast"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/line"
+          />
+
+      </LinearLayout>
+    </FrameLayout>
+
+  </android.support.v7.widget.CardView>
+</layout>

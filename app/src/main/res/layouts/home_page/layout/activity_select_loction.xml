@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/main_content"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".home.SelectLocation"
+  android:fitsSystemWindows="true">
+
+  <android.support.design.widget.AppBarLayout
+    android:id="@+id/appbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+    <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@android:color/white"
+      app:contentInsetLeft="0dp"
+      app:contentInsetStart="0dp"
+      app:layout_scrollFlags="enterAlways"
+      app:navigationIcon="@drawable/ic_back"
+      app:popupTheme="@style/AppTheme.PopupOverlay"
+      app:title="Select Location"/>
+  </android.support.design.widget.AppBarLayout>
+
+  <android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="12dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <fragment
+      android:id="@+id/autocomplete_fragment"
+      android:layout_width="0dp"
+      android:layout_height="40dp"
+      android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+      android:id="@+id/tv1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:clickable="true"
+      android:drawableLeft="@drawable/ic_my_location"
+      android:drawablePadding="6dp"
+      android:focusable="true"
+      android:gravity="center_vertical"
+      android:text="Use Current Location"
+      android:textColor="@color/dark_blue"
+      android:textSize="16sp"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/autocomplete_fragment"/>
+
+    <ProgressBar
+      android:id="@+id/progressCircle"
+      android:layout_width="wrap_content"
+      android:layout_height="0dp"
+      android:layout_marginLeft="8dp"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="@id/tv1"
+      app:layout_constraintLeft_toRightOf="@id/tv1"
+      app:layout_constraintTop_toTopOf="@id/tv1"/>
+
+    <TextView
+      android:id="@+id/tv3"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:text="Selected Location:"
+      android:textColor="@color/black_trans180"
+      android:textSize="12sp"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tv1"/>
+
+    <TextView
+      android:id="@+id/tv_selectedLocation"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="4dp"
+      android:text="Bangalore"
+      android:textColor="@color/black_trans180"
+      android:textSize="15sp"
+      android:visibility="visible"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tv3"/>
+
+    <Button
+      android:id="@+id/btn_Confirm"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="26dp"
+      android:paddingTop="6dp"
+      android:paddingBottom="6dp"
+      android:paddingLeft="26dp"
+      android:paddingRight="26dp"
+      android:background="@drawable/bg_fround_green"
+      android:minHeight="0dp"
+      android:text="@string/confirm"
+      android:textAllCaps="false"
+      android:textColor="@android:color/white"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tv_selectedLocation"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintVertical_bias="1"
+      android:layout_marginBottom="24dp"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+</android.support.design.widget.CoordinatorLayout>

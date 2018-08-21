@@ -1,0 +1,38 @@
+[
+  {
+    "lat": 51.5064490,
+    "lng": -0.1244260,
+    "title": "Corinthia Hotel London",
+    "snippet": "Whitehall Pl"
+  },
+  {
+    "lat": 51.5097080,
+    "lng": -0.1200450,
+    "title": "Savoy Place",
+    "snippet": "Covent Garden"
+  },
+  {
+    "lat": 51.5090680,
+    "lng": -0.1421420,
+    "title": "Albemarle St",
+    "snippet": "Mayfair"
+  },
+  {
+    "lat": 51.4976080,
+    "lng": -0.1456320,
+    "title": " Victoria Square",
+    "snippet": " Belgravia"
+  },
+  {
+    "lat": 51.5077540,
+    "lng": -0.1378760,
+    "title": "Jermyn Street",
+    "snippet": "St. James's"
+  },
+  {
+    "lat": 51.5074250,
+    "lng": -0.1323230,
+    "title": "Pall Mall",
+    "snippet": "Westminster"
+  }
+]

@@ -1,0 +1,32 @@
+<resources>
+  <string name="my_account_subtitle">My Account gives you quick access to tools that let you safeguard your data and protect your privacy.</string>
+  <string name="confirm">Confirm</string>
+
+  <string-array name="manageAcc_titles">
+    <item>My Chartouts</item>
+    <item>Edit Profile</item>
+    <item>Favorites</item>
+    <item>Post on Chartout</item>
+    <item>Host on Locolhive to sell</item>
+    <item>Settings</item>
+    <item>Increase Reach</item>
+  </string-array>
+
+  <string-array name="myProfile_titles">
+    <item>Edit Profile</item>
+    <item>Edit Seller Profile</item>
+    <item>Additional Photos</item>
+    <item>View Profile</item>
+    <item>Logout</item>
+  </string-array>
+
+  <string-array name="settings_titles">
+    <item>Change Mobile Number</item>
+    <item>Link Facebook</item>
+    <item>Deactivate your account</item>
+    <item>Report an issue</item>
+  </string-array>
+
+  <string name="welcome_1_s">Welcome %1$s!</string>
+
+</resources>

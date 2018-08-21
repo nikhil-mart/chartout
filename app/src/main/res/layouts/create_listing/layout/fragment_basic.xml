@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+  <ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".create.FragBasicDetails"
+    tools:showIn="@layout/activity_create"
+    >
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingStart="@dimen/content_margin_lr"
+      android:paddingEnd="@dimen/content_margin_lr"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Post your experiences on activities, trips and destinations"
+        android:textColor="@color/mast"
+        android:textSize="@dimen/host_h1_textSize"/>
+
+      <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="start"
+        android:text="Basic Details"
+        android:textColor="@color/mast"
+        android:textSize="@dimen/host_h1_textSize"
+        android:visibility="gone"/>
+
+      <TextView
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Tagline of your post *"
+        android:textSize="@dimen/h2_textSize"/>
+      <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_rect_trans_padding"
+        android:hint="Write a short headline"
+        android:inputType="text"
+        android:singleLine="true"/>
+
+      <Spinner
+        android:id="@+id/sp_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_rect_trans"
+        android:minHeight="@dimen/min_spinner_height"/>
+
+      <Spinner
+        android:id="@+id/sp_cat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_rect_trans"
+        android:minHeight="@dimen/min_spinner_height"/>
+
+      <android.support.constraint.ConstraintLayout
+        android:id="@+id/primaryImageContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+          android:id="@+id/img"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:adjustViewBounds="true"
+          android:scaleType="centerCrop"
+          android:visibility="gone"
+          app:layout_constraintDimensionRatio="1.777"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          tools:src="@drawable/placeholder"
+          />
+
+        <ImageButton
+          android:id="@+id/btn_Delete"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:layout_marginTop="2dp"
+          android:layout_marginEnd="2dp"
+          android:background="@null"
+          android:scaleType="fitXY"
+          android:src="@android:drawable/ic_menu_close_clear_cancel"
+          android:visibility="gone"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+          android:id="@+id/upload_cover"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/bg_rect_trans_padding"
+          android:drawableEnd="@drawable/ic_right"
+          android:text="Upload a cover picture"
+          android:textSize="16sp"
+          app:layout_constraintTop_toBottomOf="@id/img"/>
+
+      </android.support.constraint.ConstraintLayout>
+
+      <TextView
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Add main destination *"
+        android:textSize="@dimen/h2_textSize"/>
+
+      <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp">
+        <ImageView
+          android:id="@+id/map"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:layout_marginBottom="4dp"
+          android:adjustViewBounds="true"
+          android:visibility="gone"
+          app:layout_constraintBottom_toTopOf="@id/places_autocomplete"
+          app:layout_constraintDimensionRatio="1.777"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toTopOf="parent"/>
+        <com.seatgeek.placesautocomplete.PlacesAutocompleteTextView
+          android:id="@+id/places_autocomplete"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/bg_rect_trans_padding"
+          android:inputType="textPostalAddress"
+          android:singleLine="true"
+          android:textColor="@color/grey800"
+          android:textSize="15sp"
+          app:layout_constraintTop_toBottomOf="@id/map"
+          app:pacv_clearEnabled="true"
+          app:pacv_googleMapsApiKey="AIzaSyAtQj-qUDSGQpvUKFULDbYXzNTg3mqP6Bw"
+          app:pacv_historyFile="@null"
+          app:pacv_resultType="cities"
+          />
+      </android.support.constraint.ConstraintLayout>
+
+      <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ImageView
+          android:id="@+id/nxt"
+          android:layout_width="42dp"
+          android:layout_height="38dp"
+          android:layout_marginTop="32dp"
+          android:layout_marginBottom="18dp"
+          android:layout_gravity="end|bottom"
+          android:adjustViewBounds="true"
+          android:background="@color/light_shadow"
+          android:src="@drawable/ic_right"
+          android:tint="@color/white"/>
+      </FrameLayout>
+
+    </LinearLayout>
+  </ScrollView>
+</layout>

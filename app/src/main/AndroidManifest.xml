@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  package="com.locolhive.chartout">
+
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+  <application
+    android:allowBackup="true"
+    android:icon="@drawable/icon"
+    android:label="@string/app_name"
+    android:name=".home.GlobalData"
+    android:roundIcon="@drawable/icon"
+    android:supportsRtl="false"
+    android:theme="@style/AppTheme"
+    tools:replace="android:icon,android:supportsRtl">
+    <meta-data
+      android:name="com.google.android.geo.API_KEY"
+      android:value="AIzaSyAtQj-qUDSGQpvUKFULDbYXzNTg3mqP6Bw"/>
+
+    <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more. -->
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_icon"
+        android:resource="@drawable/ic_stat_ic_notification" />
+    <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+         notification message. See README(https://goo.gl/6BKBk7) for more. -->
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_color"
+        android:resource="@color/colorAccent" />
+
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_channel_id"
+        android:value="@string/default_notification_channel_id"/>
+
+    <!-- region Activities -->
+    <activity
+      android:name=".login.LoginSignupActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/BgTheme"/>
+    <activity
+      android:name=".login.SplashActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/BgTheme">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".login.LoginActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/BgTheme"/>
+    <activity
+      android:name=".login.SignupActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/BgTheme"/>
+    <activity
+      android:label="@string/title_activity_main"
+      android:name=".home.MainActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppThemeDark"/>
+    <activity
+      android:exported="true"
+      android:name=".home.ViewListingActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme">
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+
+        <data
+          android:host="www.locolhive.com"
+          android:pathPrefix="/post"
+          android:scheme="http"/>
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".home.SelectLocation"
+      android:theme="@style/AppTheme"/>
+    <activity
+      android:name=".profile.MyProfileActivity"
+      android:theme="@style/AppTheme"/>
+    <activity
+      android:name=".home.BlankActivity"
+      android:theme="@style/AppTheme"/>
+    <activity
+      android:name=".chat.ActivityChat"
+      android:theme="@style/AppTheme">
+    </activity>
+    <activity
+      android:exported="true"
+      android:name=".login.Onboarding"
+      android:theme="@style/AppTheme">
+    </activity>
+    <activity android:name=".login.Onboarding2"/>
+    <activity
+      android:configChanges="orientation|keyboard"
+      android:name=".create.UploadActivity"
+      android:theme="@style/AppTheme"/>
+    <activity
+      android:label="@string/title_activity_create"
+      android:name=".create.CreateActivity"
+      android:theme="@style/AppTheme"/>
+    <activity
+      android:name=".login.OtpActivity"
+      android:theme="@style/BgTheme"/>
+
+    <!-- endregion -->
+
+    <provider
+      android:authorities="${applicationId}.provider"
+      android:exported="false"
+      android:grantUriPermissions="true"
+      android:name="android.support.v4.content.FileProvider">
+      <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/provider_paths"/>
+    </provider>
+
+    <activity
+      android:name=".map.MapActivity"
+      android:theme="@style/AppTheme.Map"
+      android:launchMode="singleTop"
+      android:exported="true">
+      <meta-data android:name="android.app.searchable"
+        android:resource="@xml/searchable" />
+      <intent-filter>
+        <action android:name="android.intent.action.SEARCH" />
+      </intent-filter>
+    </activity>
+
+    <service
+        android:name=".MyFirebaseMessagingService">
+      <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+      </intent-filter>
+    </service>
+
+  </application>
+
+</manifest>

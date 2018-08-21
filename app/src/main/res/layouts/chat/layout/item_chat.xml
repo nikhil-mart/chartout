@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/card"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="2dp"
+  android:clickable="true"
+  android:focusable="true"
+  android:foreground="?android:attr/selectableItemBackground"
+  >
+
+  <android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:paddingLeft="@dimen/content_margin_lr"
+    android:paddingRight="@dimen/content_margin_lr">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/hostImage"
+      android:layout_width="60dp"
+      android:layout_height="60dp"
+      android:scaleType="centerCrop"
+      android:src="@drawable/pic_person"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+      android:id="@+id/hostName"
+      android:textStyle="bold"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="4dp"
+      android:layout_marginLeft="12dp"
+      android:ellipsize="end"
+      android:singleLine="true"
+      android:text="Person Name"
+      android:textSize="@dimen/host_h1_textSize"
+      app:layout_constraintBottom_toTopOf="@id/expName"
+      app:layout_constraintLeft_toRightOf="@id/hostImage"/>
+
+    <TextView
+      android:id="@+id/expName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="4dp"
+      android:layout_marginRight="4dp"
+      android:ellipsize="marquee"
+      android:singleLine="true"
+      android:text="Experience Name and Location"
+      app:layout_constraintBottom_toBottomOf="@id/hostImage"
+      app:layout_constraintHorizontal_bias="0"
+      app:layout_constraintLeft_toLeftOf="@id/hostName"
+      app:layout_constraintRight_toLeftOf="@id/time"/>
+
+    <TextView
+      android:id="@+id/time"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="4dp"
+      android:text="11:40"
+      android:textSize="11sp"
+      app:layout_constraintBaseline_toBaselineOf="@id/expName"
+      app:layout_constraintRight_toRightOf="parent"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/dot"
+      android:layout_width="10dp"
+      android:layout_height="10dp"
+      android:layout_marginLeft="6dp"
+      android:src="@android:color/transparent"
+      app:civ_circle_background_color="@color/red"
+      app:layout_constraintBottom_toBottomOf="@id/hostName"
+      app:layout_constraintHorizontal_bias="0.9"
+      app:layout_constraintLeft_toRightOf="@id/hostName"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="@id/hostName"
+      app:layout_constraintVertical_bias="0.5"/>
+
+  </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="save_publish_later"><![CDATA[Save & Publish Later]]></string>
+  <string name="place_name">
+    <![CDATA[
+        Near %1$s
+    ]]>
+  </string>
+  <string name="place_add">
+    <![CDATA[
+        %1$s
+    ]]>
+    </string>
+
+  <string name="that_s_it">That\'s it!</string>
+  <string name="you_re_ready_to_publish">You\'re ready to publish</string>
+  <string name="publish_now">Publish Now</string>
+  <string name="publish_the_experience_now">Publish the Experience Now</string>
+  <string name="host_ready1">To have a sneek peek of your listing before you publish it, click on the preiview button below.</string>
+  <string name="host_ready2">If you want to postpone Publish, then mark it as Save. We will save the changes as \"In Progress\"</string>
+
+
+  <string name="title_activity_create">CreateActivity</string>
+  <string name="post">Post</string>
+  <string name="available_on_locolhive_to_book">Available on Locolhive to book?</string>
+
+
+</resources>

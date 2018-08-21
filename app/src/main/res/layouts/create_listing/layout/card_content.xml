@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<android.support.v7.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="@dimen/margin_section_card"
+  android:background="@drawable/bg_rect_white_padding">-->
+<EditText
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/et"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="@dimen/margin_section_card"
+  android:background="@drawable/bg_rect_white_padding"
+  android:gravity="start"
+  android:hint="Add new details"
+  android:inputType="textMultiLine"
+  android:maxLines="5"
+  android:minLines="3"
+  />
+  <!--</android.support.v7.widget.CardView>-->

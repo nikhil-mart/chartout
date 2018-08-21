@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.locolhive.chartout.helpers.ImageViewPager.SimpleViewPager
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:simpleviewpager="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/images"
+  android:layout_width="match_parent"
+  android:layout_height="@dimen/expanded_toolbar_height"
+  simpleviewpager:scaleType="CENTER_CROP"
+  simpleviewpager:vertical="false"
+  />

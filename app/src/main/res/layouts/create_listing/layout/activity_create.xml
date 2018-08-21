@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".create.CreateActivity"
+  android:fitsSystemWindows="true">
+
+  <android.support.design.widget.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.ToolbarGrey">
+    <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:background="@color/colorPrimary"
+      app:contentInsetStartWithNavigation="0dp"
+      app:navigationIcon="@drawable/ic_back_white"
+      app:popupTheme="@style/AppTheme.ToolbarGrey">
+
+      <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        >
+        <android.support.design.widget.TabItem
+          android:id="@+id/tabItem"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Basic Details"/>
+
+        <android.support.design.widget.TabItem
+          android:id="@+id/tabItem2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Add Content"/>
+
+        <android.support.design.widget.TabItem
+          android:id="@+id/tabItem3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Finish"/>
+
+      </android.support.design.widget.TabLayout>
+
+    </android.support.v7.widget.Toolbar>
+  </android.support.design.widget.AppBarLayout>
+
+  <include layout="@layout/content_create"/>
+
+  <io.github.yavski.fabspeeddial.FabSpeedDial
+    android:id="@+id/speed"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    app:fabGravity="bottom_end"
+    app:fabMenu="@menu/menu_create"
+    app:miniFabBackgroundTint="@android:color/white"
+    app:miniFabDrawableTint="@color/colorPrimaryDark"
+    app:miniFabTitleTextColor="@color/grey600"/>
+
+  <!--  <android.support.design.widget.FloatingActionButton
+      android:id="@+id/speed"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_margin="@dimen/fab_margin"
+      android:layout_gravity="bottom|end"
+      android:tint="@color/white"
+      android:visibility="visible"
+      app:srcCompat="@android:drawable/ic_input_add"/>-->
+
+</android.support.design.widget.CoordinatorLayout>

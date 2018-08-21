@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="enter_new_mobile_number">Enter new mobile number</string>
+  <string-array name="manage_exp_spinner">
+    <item>Published</item>
+    <item>Saved</item>
+    <item>Deleted</item>
+  </string-array>
+  <string-array name="manage_req_spinner">
+    <item>Confirmed by Host</item>
+    <item>Confirmed by you</item>
+    <item>Sent</item>
+    <item>Received</item>
+  </string-array>
+  <string name="t_c"><![CDATA[T & C]]></string>
+</resources>

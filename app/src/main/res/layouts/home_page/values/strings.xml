@@ -1,0 +1,24 @@
+<resources>
+
+
+  <string name="recent_reviews">Recent Reviews</string>
+  <string name="host_image">Host Image</string>
+
+  <string name="share">Share</string>
+  <string name="heart">Heart</string>
+  <string name="desc_experience">Description:</string>
+  <string name="places_nearby">Places to see nearby</string>
+  <string name="what_do_i_do_for_a_living">What do I do for a living?</string>
+  <string name="my_skillsets">My Skillsets</string>
+  <string name="photos_of">Photos:</string>
+  <string name="rules_and_guidelines">Rules and Guidelines</string>
+  <string name="expBecause">Join my experience because</string>
+  <string name="hosting_because">I am hosting because</string>
+  <string name="hosted_by_">Posted by %s</string>
+  <string name="path_maker">Category- %1$s</string>
+  <string name="no_listing_found_in_this_category">No listing found in this category</string>
+
+  <string name="default_notification_channel_name" translatable="true">News</string>
+  <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
+</resources>

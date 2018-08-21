@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <item
+    android:id="@+id/action_call"
+    android:orderInCategory="100"
+    android:title="Call Host"
+    app:showAsAction="never"/>
+
+  <item
+    android:id="@+id/action_msg"
+    android:orderInCategory="100"
+    android:title="Message Host"
+    app:showAsAction="never"/>
+  <item
+    android:id="@+id/action_map"
+    android:orderInCategory="100"
+    android:title="Open Map"
+    app:showAsAction="never"/>
+  <item
+    android:id="@+id/action_cancel"
+    android:orderInCategory="100"
+    android:title="Cancel Booking"
+    app:showAsAction="never"/>
+</menu>

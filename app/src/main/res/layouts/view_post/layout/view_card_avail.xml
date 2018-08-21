@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  app:cardCornerRadius="0dp"
+  android:layout_marginTop="@dimen/margin_section_card"
+  >
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical">
+    <TextView
+      android:id="@+id/avail"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/available_to_book_with_me_1_s"
+      android:textSize="16sp"/>
+    <TextView
+      android:id="@+id/locol"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/listed_locol"
+      android:textSize="16sp"
+      android:layout_marginTop="6dp"/>
+  </LinearLayout>
+
+</android.support.v7.widget.CardView>

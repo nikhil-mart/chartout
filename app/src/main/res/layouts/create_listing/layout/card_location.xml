@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<android.support.v7.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="@dimen/margin_section_card"
+  >
+-->
+
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="@dimen/margin_section_card">
+
+  <ImageView
+    android:id="@+id/map"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginBottom="4dp"
+    android:adjustViewBounds="true"
+    android:visibility="gone"
+    app:layout_constraintBottom_toTopOf="@id/et"
+    app:layout_constraintDimensionRatio="1.777"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+
+  <com.seatgeek.placesautocomplete.PlacesAutocompleteTextView
+    android:id="@+id/places_autocomplete"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rect_white_padding"
+    android:hint="Add a location map"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:pacv_clearEnabled="true"
+    app:pacv_googleMapsApiKey="AIzaSyAtQj-qUDSGQpvUKFULDbYXzNTg3mqP6Bw"
+    app:pacv_resultType="cities"
+    app:pacv_historyFile="@null"
+    android:singleLine="true"
+    android:inputType="textPostalAddress"
+    />
+
+</android.support.constraint.ConstraintLayout>
+
+  <!--</android.support.v7.widget.CardView>-->

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+  <data>
+    <variable
+      name="post"
+      type="com.locolhive.chartout.classes.Post"/>
+  </data>
+  <android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="0dp"
+    >
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="10dp"
+      android:clipToPadding="false"
+      >
+
+      <TextView
+        android:id="@+id/tv_Path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/path_maker"
+        android:text="@{@string/path_maker(post.category.category)}"
+        android:textSize="12sp"
+        />
+
+      <TextView
+        android:id="@+id/tv_Title"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@{post.title}"
+        tools:text="Dive in cold water with coach"
+        android:textSize="@dimen/viewListing_title_textSize"/>
+
+      <android.support.constraint.ConstraintLayout
+        android:id="@+id/hostDetailsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+          android:id="@+id/hostImage"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:clickable="true"
+          android:focusable="true"
+          android:scaleType="centerCrop"
+          android:src="@drawable/pic_person"
+          android:tint="@color/black"
+          app:layout_constraintRight_toRightOf="@id/hostDetailsContainer"
+          app:layout_constraintTop_toTopOf="@id/hostDetailsContainer"
+          />
+
+        <TextView
+          android:id="@+id/tv_postedBy"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="6dp"
+          android:ellipsize="end"
+          android:gravity="start"
+          tools:text="@string/hosted_by_"
+          android:text="@{@string/hosted_by_(post.host.fullName)}"
+          android:textSize="@dimen/sub_h2_textSize"
+          app:layout_constraintHorizontal_bias="0"
+          app:layout_constraintLeft_toLeftOf="@id/hostDetailsContainer"
+          app:layout_constraintRight_toLeftOf="@id/hostImage"
+          app:layout_constraintTop_toTopOf="@id/hostDetailsContainer"/>
+        <TextView
+          android:id="@+id/tv_Destination"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:gravity="start"
+          tools:text="@string/destination_1_s"
+          android:text="@{@string/destination_1_s(post.destination)}"
+          android:textSize="@dimen/sub_h2_textSize"
+          app:layout_constraintHorizontal_bias="0"
+          app:layout_constraintLeft_toLeftOf="@id/hostDetailsContainer"
+          app:layout_constraintRight_toLeftOf="@id/hostImage"
+          app:layout_constraintTop_toBottomOf="@id/tv_postedBy"/>
+      </android.support.constraint.ConstraintLayout>
+
+      <ImageView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginRight="-10dp"
+        android:src="@drawable/map"
+        android:scaleType="centerCrop"/>
+
+    </LinearLayout>
+
+  </android.support.v7.widget.CardView>
+</layout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+  <data>
+    <variable
+      name="post"
+      type="com.locolhive.chartout.create.PostRequest"/>
+  </data>
+
+  <ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".create.FragBasicDetails"
+    tools:showIn="@layout/activity_create"
+    >
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingStart="@dimen/content_margin_lr"
+      android:paddingEnd="@dimen/content_margin_lr"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Privacy Settings"
+        android:textColor="@color/mast"
+        android:textSize="@dimen/host_h1_textSize"/>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Control the amount of personal information visible to the public"
+        android:textSize="@dimen/h3_textSize"/>
+
+      <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Allow others to see my profile"
+        android:textSize="17sp"/>
+      <Switch
+        android:id="@+id/swVisibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:checked="@={post.isProfilePublic}"/>
+
+      <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Hide exact location(s) in my post"
+        android:textSize="17sp"/>
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Recommended for privacy reasons\nShow location if it's a public place"
+        android:textSize="@dimen/sub_h2_textSize"/>
+      <Switch
+        android:id="@+id/swLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:checked="@={post.hideExact}"/>
+
+
+      <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Enable messages by guests"
+        android:textSize="17sp"/>
+      <Switch
+        android:id="@+id/swMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:checked="@={post.messagesEnabled}"/>
+
+      <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Provide booking with me"
+        android:textSize="17sp"/>
+      <Switch
+        android:id="@+id/swBooking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:checked="@={post.availableToBook}"/>
+
+      <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/available_on_locolhive_to_book"
+        android:textSize="17sp"/>
+      <Switch
+        android:id="@+id/swLocol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:checked="@={post.listedOnLocol}"/>
+
+      <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+          android:id="@+id/nxt"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="32dp"
+          android:layout_marginBottom="18dp"
+          android:layout_gravity="end|bottom"
+          android:paddingTop="7dp"
+          android:paddingBottom="7dp"
+          android:paddingStart="16dp"
+          android:paddingEnd="6dp"
+          android:background="@color/light"
+          android:drawableEnd="@drawable/ic_right_white"
+          android:drawablePadding="6dp"
+          android:gravity="center"
+          android:text="@string/post"
+          android:textColor="@color/white"
+          android:textSize="18sp"/>
+      </FrameLayout>
+
+    </LinearLayout>
+
+  </ScrollView>
+
+</layout>

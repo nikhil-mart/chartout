@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".settings.ChangeMobileNum">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="42dp"
+    android:layout_marginLeft="@dimen/content_margin_lr"
+    android:layout_marginRight="@dimen/content_margin_lr"
+    android:orientation="vertical">
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/ipsem"
+      android:textSize="@dimen/h3_textSize"/>
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="48dp"
+      android:text="@string/enter_new_mobile_number"
+      android:textSize="@dimen/h2_textSize"/>
+
+    <EditText
+      android:id="@+id/eT_Mobile"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:paddingTop="@dimen/et_padding_tb"
+      android:paddingBottom="@dimen/et_padding_tb"
+      android:background="@drawable/bg_rect_trans_padding"
+      android:gravity="start"
+      android:hint=""
+      android:maxLines="1"
+      android:minHeight="0dp"
+      android:text=""
+      android:textSize="17sp"/>
+
+    <Button
+      android:id="@+id/btn_PublishExp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:padding="14dp"
+      android:background="@drawable/bg_fround_green"
+      android:minHeight="0dp"
+      android:text="@string/change"
+      android:textAllCaps="false"
+      android:textColor="@android:color/white"
+      android:textSize="22sp"/>
+
+  </LinearLayout>
+
+</FrameLayout>

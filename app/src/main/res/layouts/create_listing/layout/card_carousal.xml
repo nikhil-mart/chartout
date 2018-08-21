@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:padding="2dp"
+  android:layout_marginBottom="@dimen/margin_section_card"
+  >
+
+  <com.locolhive.chartout.helpers.ImageViewPager.SimpleViewPager
+    xmlns:simpleviewpager="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/images"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    simpleviewpager:layout_constraintDimensionRatio="1.777"
+    simpleviewpager:scaleType="CENTER_CROP"
+    simpleviewpager:vertical="false"
+    />
+
+</android.support.constraint.ConstraintLayout>
+
+  <!--</android.support.v7.widget.CardView>-->

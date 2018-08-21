@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".profile.AddPhotosFrag">
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="4dp"
+    android:paddingLeft="16dp"
+    android:gravity="start|center_vertical"
+    android:text="Upload Photos"
+    android:textSize="20sp"/>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_marginTop="44dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:background="@color/line_color"/>
+
+  <android.support.v7.widget.RecyclerView
+    android:id="@+id/recycler"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="58dp"
+    android:layout_marginLeft="@dimen/content_margin_lr"
+    android:layout_marginRight="@dimen/content_margin_lr"/>
+
+</FrameLayout>

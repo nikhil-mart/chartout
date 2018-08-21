@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "278999031883",
+    "firebase_url": "https://locolhive-3a3b6.firebaseio.com",
+    "project_id": "locolhive-3a3b6",
+    "storage_bucket": "locolhive-3a3b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278999031883:android:d82e50a0f37beba3",
+        "android_client_info": {
+          "package_name": "com.locolhive.chartout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "278999031883-l2k1655kdvhvb8qng4k44ps4knhubf13.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtQj-qUDSGQpvUKFULDbYXzNTg3mqP6Bw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

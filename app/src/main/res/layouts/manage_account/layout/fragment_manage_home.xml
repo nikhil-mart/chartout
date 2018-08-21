@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:theme="@style/AppTheme"
+  tools:context=".manageAccount.AccountFrag">
+
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_gradient"
+    android:elevation="5dp">
+
+    <android.support.constraint.ConstraintLayout
+      android:id="@+id/loggedOut"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:visibility="gone">
+      <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+      <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:background="@drawable/bg_fround_trans_white"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="LOG IN"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/signUp"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        />
+      <Button
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:background="@drawable/bg_fround_google"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="Sign Up"
+        android:textColor="@color/grey800"
+        android:textSize="17sp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toRightOf="@id/login"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        />
+      <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="12dp"
+        android:paddingLeft="@dimen/content_margin_lr"
+        android:paddingRight="@dimen/content_margin_lr"
+        android:gravity="center"
+        android:text="We will redirect you to Locolhive user registration page"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signUp"/>
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+      android:id="@+id/loggedIn"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:visibility="visible">
+
+      <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/hostImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="18dp"
+        android:layout_gravity="center_horizontal"
+        android:elevation="4dp"
+        android:src="@drawable/pic_person"/>
+
+      <TextView
+        android:id="@+id/hostName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="@string/welcome_1_s"
+        android:textColor="@color/white"
+        android:textSize="@dimen/host_h1_textSize"
+        />
+
+      <TextView
+        android:id="@+id/viewProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="View My Profile"
+        android:textStyle="italic"
+        android:textColor="@color/white"
+        android:textSize="@dimen/h3_textSize"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        />
+
+    </LinearLayout>
+
+  </FrameLayout>
+
+  <android.support.v7.widget.RecyclerView
+    android:id="@+id/optionsRecycler"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="@dimen/content_margin_lr"
+    android:paddingLeft="@dimen/content_margin_lr"
+    android:paddingRight="@dimen/content_margin_lr"/>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/content_margin_lr"
+    android:paddingLeft="@dimen/content_margin_lr"
+    android:paddingRight="@dimen/content_margin_lr"
+    >
+
+    <Button
+      android:id="@+id/tnc"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="18dp"
+      android:paddingTop="5dp"
+      android:paddingBottom="5dp"
+      android:paddingLeft="24dp"
+      android:paddingRight="24dp"
+      android:background="@drawable/bg_fround_trans"
+      android:minHeight="0dp"
+      android:minWidth="0dp"
+      android:text="@string/t_c"
+      android:textColor="@color/grey600"
+      android:textSize="15sp"
+      />
+    <Button
+      android:id="@+id/logout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="5dp"
+      android:paddingBottom="5dp"
+      android:paddingLeft="24dp"
+      android:paddingRight="24dp"
+      android:background="@drawable/bg_fround_trans_mast"
+      android:minHeight="0dp"
+      android:minWidth="0dp"
+      android:text="Logout"
+      android:textColor="@color/mast"
+      android:textSize="15sp"
+      android:visibility="gone"
+      />
+
+  </LinearLayout>
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/content_margin_lr"
+    android:layout_marginRight="@dimen/content_margin_lr"
+    android:text="Chartout is a part of Locolhive."
+    android:textSize="16sp"/>
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/content_margin_lr"
+    android:layout_marginRight="@dimen/content_margin_lr"
+    android:paddingTop="4dp"
+    android:text="Download Locolhive now!"
+    android:textColor="@color/blue"
+    android:textSize="17sp"/>
+
+</LinearLayout>

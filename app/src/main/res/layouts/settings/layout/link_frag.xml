@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".settings.ChangeMobileNum">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="42dp"
+    android:layout_marginLeft="@dimen/content_margin_lr"
+    android:layout_marginRight="@dimen/content_margin_lr"
+    android:orientation="vertical">
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="36dp"
+      android:text="@string/ipsem"
+      android:textSize="@dimen/h3_textSize"/>
+
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <Button
+        android:id="@+id/loginfb_btn"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingLeft="22dp"
+        android:background="@drawable/bg_fround_fbblue"
+        android:drawableLeft="@drawable/ic_fb"
+        android:drawablePadding="-40dp"
+        android:drawableStart="@drawable/ic_fb"
+        android:foreground="@drawable/ripple_login"
+        android:text="Link Facebook Account"
+        android:textColor="@android:color/white"/>
+
+      <ImageView
+        android:layout_width="36dp"
+        android:layout_height="32dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="end|center_vertical"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_tick"
+        android:tint="@color/confirmGreen"/>
+    </FrameLayout>
+
+
+  </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="send">SEND</string>
+
+  <string-array name="msgArr">
+
+    <item> Lorem ipsum </item>
+    <item> dolor sit amet, consectetur </item>
+    <item> adipiscing elit. Nam </item>
+    <item> congue </item>
+    <item> rhoncus justo </item>
+    <item> ac </item>
+    <item> facilisis. Nam placerat </item>
+    <item> maximus libero et </item>
+    <item> tempus. Phasellus vitae </item>
+    <item> est </item>
+    <item> libero. Etiam </item>
+    <item> finibus ante </item>
+    <item> magna, quis </item>
+    <item> tincidunt ipsum pharetra in. </item>
+    <item> Nulla at </item>
+    <item> porta nisl. Praesent tristique </item>
+    <item> sodales maximus. Duis sodales </item>
+    <item> nibh a interdum </item>
+    <item> fringilla. Quisque sollicitudin at </item>
+    <item> felis </item>
+    <item> tristique imperdiet. Nunc interdum </item>
+    <item> enim </item>
+    <item> a tortor vestibulum </item>
+    <item> viverra. Aenean </item>
+    <item> pretium </item>
+    <item> turpis orci, in </item>
+    <item> tincidunt erat </item>
+    <item> efficitur </item>
+    <item> sollicitudin. Nullam sit </item>
+    <item> amet porttitor leo. Integer </item>
+    <item> lectus lectus, malesuada fermentum </item>
+    <item> scelerisque nec, tincidunt </item>
+    <item> non ligula. Fusce in </item>
+    <item> condimentum metus. metus. </item>
+
+  </string-array>
+
+</resources>

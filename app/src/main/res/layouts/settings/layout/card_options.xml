@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/card"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:clickable="true"
+  android:focusable="true"
+  android:orientation="vertical">
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/line_color"/>
+
+  <TextView
+    android:id="@+id/card_Title"
+    android:textStyle="bold"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="14dp"
+    android:layout_marginBottom="14dp"
+    android:layout_marginLeft="@dimen/content_margin_lr"
+    android:layout_marginRight="@dimen/content_margin_lr"
+    android:textSize="18sp"
+    app:layout_constraintLeft_toRightOf="@id/card_Icon"/>
+</LinearLayout>

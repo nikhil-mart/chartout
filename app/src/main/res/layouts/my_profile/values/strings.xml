@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="job_location">%1$s | %2$s</string>
+  <string name="profile_rating">%1$s of 5 stars %2$s reviews</string>
+  <string name="interests_amp_hobbies"><![CDATA[Interests & Hobbies]]></string>
+  <string name="upload_file">Upload File</string>
+
+  <string name="verification_id_name_amp_number"><![CDATA[Verification ID Name & Number]]></string>
+  <string name="number">Number</string>
+  <string name="current_city">Current City</string>
+  <string name="male">Male</string>
+  <string name="female">Female</string>
+  <string name="prefer_not_to_say">Prefer not to say</string>
+  <string name="gender">Gender</string>
+  <string name="full_name">Full Name</string>
+  <string name="tagline_for_you">Tagline for you</string>
+  <string name="short_description">Short Description</string>
+  <string name="profile_photo">Profile Photo</string>
+  <string name="upload_new">Upload New</string>
+  <string name="remove_image">Remove Image</string>
+  <string name="birthday">Birthday</string>
+  <string name="mobile_number">Mobile Number</string>
+  <string name="change_mobile_number">Change Mobile Number</string>
+  <string name="preferred_language">Preferred Language</string>
+  <string name="update_profile">Update Profile</string>
+
+  <string-array name="hobbies">
+    <item>Acting</item>
+    <item>Board Games</item>
+    <item>Gaming</item>
+    <item>Candle making</item>
+    <item>Badminton</item>
+    <item>Chess</item>
+    <item>Cooking</item>
+    <item>Dance</item>
+    <item>Drama</item>
+    <item>Drawing</item>
+    <item>Painting</item>
+    <item>Dogs</item>
+    <item>Cats</item>
+    <item>Pottery</item>
+    <item>Reading</item>
+    <item>Singing</item>
+    <item>Sports</item>
+    <item>Table Tennis</item>
+    <item>Tennis</item>
+    <item>Writing</item>
+    <item>Yoga</item>
+    <item>Cycling</item>
+    <item>Driving</item>
+    <item>Photography</item>
+    <item>Shopping</item>
+    <item>Skiing</item>
+    <item>Skydiving</item>
+    <item>Surfing</item>
+    <item>Swimming</item>
+  </string-array>
+
+</resources>

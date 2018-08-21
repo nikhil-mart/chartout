@@ -1,0 +1,23 @@
+<com.locolhive.chartout.helpers.CustomViewPager
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/container"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/greyLight"
+  app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  tools:layout="@layout/fragment_basic"/>
+
+  <!--
+  <fragment
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:name="com.locolhive.chartout.create.CreateActivityFragment"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:layout="@layout/fragment_basic"/>
+  -->

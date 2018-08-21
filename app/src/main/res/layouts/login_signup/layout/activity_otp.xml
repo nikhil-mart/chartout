@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fitsSystemWindows="true"
+  android:background="@drawable/bg2">
+
+  <ImageView
+    android:id="@+id/logo_img"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="52dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:layout_marginStart="56dp"
+    android:layout_marginEnd="56dp"
+    android:adjustViewBounds="true"
+    android:scaleType="centerInside"
+    android:src="@drawable/logo"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <TextView
+    android:id="@+id/tv1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/h2_margin_top"
+    android:text="@string/enter_the_otp_sent_to"
+    android:textSize="@dimen/h3_textSize"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/logo_img"/>
+
+  <TextView
+    android:id="@+id/phone"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/home_sectionTitle_margin_b"
+    android:text="9898989898"
+    android:textSize="@dimen/h2_textSize"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tv1"/>
+
+  <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="36dp"
+    android:layout_marginStart="@dimen/content_margin_lr"
+    android:layout_marginEnd="@dimen/content_margin_lr"
+    app:layout_constraintBottom_toTopOf="@id/btn_Confirm"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent">
+
+    <EditText
+      android:id="@+id/otp1"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginEnd="4dp"
+      android:layout_marginRight="4dp"
+      android:gravity="center_horizontal"
+      android:maxLength="1"
+      android:maxLines="1"
+      android:nextFocusRight="@id/otp2"
+      android:selectAllOnFocus="true"
+      android:textSize="30sp"/>
+
+    <EditText
+      android:id="@+id/otp2"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginEnd="4dp"
+      android:layout_marginRight="4dp"
+      android:gravity="center_horizontal"
+      android:maxLength="1"
+      android:maxLines="1"
+      android:nextFocusRight="@id/otp3"
+      android:selectAllOnFocus="true"
+      android:textSize="30sp"/>
+
+    <EditText
+      android:id="@+id/otp3"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginEnd="4dp"
+      android:layout_marginRight="4dp"
+      android:gravity="center_horizontal"
+      android:maxLength="1"
+      android:maxLines="1"
+      android:nextFocusRight="@id/otp4"
+      android:selectAllOnFocus="true"
+      android:textSize="30sp"/>
+
+    <EditText
+      android:id="@+id/otp4"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginEnd="4dp"
+      android:layout_marginRight="4dp"
+      android:gravity="center_horizontal"
+      android:maxLength="1"
+      android:maxLines="1"
+      android:selectAllOnFocus="true"
+      android:textSize="30sp"/>
+
+  </LinearLayout>
+
+  <Button
+    android:id="@+id/btn_Confirm"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginBottom="24dp"
+    android:layout_marginStart="@dimen/content_margin_lr"
+    android:layout_marginEnd="@dimen/content_margin_lr"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:background="@drawable/bg_fround_white"
+    android:text="@string/confirm_otp"
+    android:textAllCaps="false"
+    android:textColor="@android:color/black"
+    app:layout_constraintBottom_toTopOf="@id/time"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"/>
+
+  <TextView
+    android:id="@+id/time"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="6dp"
+    android:text="@string/didn_t_get_the_otp"
+    android:textColor="@color/white"
+    app:layout_constraintBottom_toTopOf="@id/resend"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"/>
+
+  <TextView
+    android:id="@+id/resend"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/h2_margin_top"
+    android:clickable="true"
+    android:focusable="true"
+    android:text="@string/resend_otp"
+    android:textSize="@dimen/h3_textSize"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

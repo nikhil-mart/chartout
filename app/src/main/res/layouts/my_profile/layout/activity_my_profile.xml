@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/main_content"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fitsSystemWindows="true"
+  tools:context=".profile.MyProfileActivity">
+
+  <android.support.design.widget.AppBarLayout
+    android:id="@+id/appbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.ToolbarGrey">
+
+    <android.support.design.widget.CollapsingToolbarLayout
+      android:id="@+id/ctl_Toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:elevation="5dp"
+      app:contentScrim="@color/mast"
+      app:expandedTitleMarginStart="160dp"
+      app:expandedTitleTextAppearance="@style/title_size"
+      app:layout_scrollFlags="scroll|exitUntilCollapsed"
+      app:scrimAnimationDuration="100"
+      app:scrimVisibleHeightTrigger="130dp"
+      >
+
+      <ImageView
+        android:id="@+id/blur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"/>
+
+      <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/hostImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="40dp"
+        android:layout_gravity="start|bottom"
+        android:src="@drawable/pic_person"
+        app:layout_collapseMode="pin"/>
+
+      <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStartWithNavigation="12dp"
+        app:layout_collapseMode="pin"
+        app:navigationIcon="@drawable/ic_back_white"
+        app:title="Full Name"
+        />
+
+    </android.support.design.widget.CollapsingToolbarLayout>
+
+  </android.support.design.widget.AppBarLayout>
+
+  <android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/content_margin_lr"
+      android:layout_marginRight="@dimen/content_margin_lr"
+      android:paddingBottom="18dp"
+      android:focusableInTouchMode="true"
+      android:orientation="vertical"
+      >
+
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+        <android.support.v7.widget.AppCompatRatingBar
+          android:id="@+id/rating"
+          style="?android:attr/ratingBarStyleSmall"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:numStars="5"
+          android:rating="3"
+          android:theme="@style/RatingBar"
+          />
+        <TextView
+          android:id="@+id/tv_rating"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:layout_marginLeft="8dp"
+          android:text="@string/profile_rating"
+          android:textSize="13sp"/>
+      </LinearLayout>
+      <TextView
+        android:id="@+id/tv_job_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/job_location"
+        android:textSize="15sp"
+        />
+
+      <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h2_margin_top"
+        android:layout_marginBottom="@dimen/viewListing_h2_spacing_bottom"
+        android:text="About Me"
+        android:textSize="@dimen/h2_textSize"/>
+      <TextView
+        android:id="@+id/tv_aboutme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/viewListing_para_spacing"
+        android:layout_marginBottom="@dimen/viewListing_para_spacing"
+        android:text="@string/lorem"/>
+
+      <TextView
+        android:id="@+id/tv_interestsH"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h2_margin_top"
+        android:layout_marginBottom="@dimen/viewListing_h2_spacing_bottom"
+        android:text="@string/interests_amp_hobbies"
+        android:textSize="@dimen/h2_textSize"/>
+      <TextView
+        android:id="@+id/tv_interests"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/viewListing_para_spacing"
+        android:layout_marginBottom="@dimen/viewListing_para_spacing"
+        android:text="@string/lorem"/>
+
+      <TextView
+        android:id="@+id/tv_created"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h2_margin_top"
+        android:layout_marginBottom="@dimen/viewListing_h2_spacing_bottom"
+        android:text="Experiences created by me"
+        android:textSize="@dimen/h2_textSize"
+        android:visibility="gone"/>
+      <android.support.v7.widget.RecyclerView
+        android:id="@+id/created_RV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="150dp"
+        android:visibility="gone"/>
+      <Button
+        android:id="@+id/viewAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/home_ViewAll_btn_margin_tb"
+        android:layout_marginBottom="@dimen/home_ViewAll_btn_margin_tb"
+        android:layout_gravity="center"
+        android:paddingTop="@dimen/home_ViewAll_btn_padding_tb"
+        android:paddingBottom="@dimen/home_ViewAll_btn_padding_tb"
+        android:paddingLeft="@dimen/home_ViewAll_btn_padding_lr"
+        android:paddingRight="@dimen/home_ViewAll_btn_padding_lr"
+        android:background="@drawable/bg_round_color"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:minHeight="0dp"
+        android:text="@string/view_all"
+        android:textColor="@color/mast"
+        android:visibility="gone"
+        />
+
+      <android.support.constraint.ConstraintLayout
+        android:id="@+id/skillsets_opener"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h2_margin_top"
+        android:clickable="true"
+        android:focusable="true"
+        >
+
+        <TextView
+          android:id="@+id/skillsets_title"
+          android:textStyle="bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:clickable="false"
+          android:text="@string/my_skillsets"
+          android:textAllCaps="false"
+          android:textSize="@dimen/h2_textSize"
+          app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <ImageView
+          android:id="@+id/skillsets_openIcon"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_marginEnd="10dp"
+          android:layout_marginRight="10dp"
+          android:clickable="false"
+          android:rotation="0"
+          android:src="@drawable/ic_right"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          tools:ignore="ContentDescription"/>
+
+      </android.support.constraint.ConstraintLayout>
+      <TextView
+        android:id="@+id/tv_skilsets"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/viewListing_para_spacing"
+        android:layout_marginBottom="@dimen/viewListing_para_spacing"
+        android:text="@string/lorem"
+        android:textSize="@dimen/data_textSize"/>
+
+      <android.support.constraint.ConstraintLayout
+        android:id="@+id/hostBecause_opener"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+          android:id="@+id/hostBecause_title"
+          android:textStyle="bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:clickable="false"
+          android:text="@string/hosting_because"
+          android:textAllCaps="false"
+          android:textSize="@dimen/h2_textSize"
+          app:layout_constraintLeft_toLeftOf="parent"/>
+        <ImageView
+          android:id="@+id/hostBecause_openIcon"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_marginEnd="10dp"
+          android:layout_marginRight="10dp"
+          android:clickable="false"
+          android:rotation="0"
+          android:src="@drawable/ic_right"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          tools:ignore="ContentDescription"/>
+
+      </android.support.constraint.ConstraintLayout>
+      <TextView
+        android:id="@+id/tv_hostBecause"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/viewListing_para_spacing"
+        android:layout_marginBottom="@dimen/viewListing_para_spacing"
+        android:text="@string/lorem"
+        android:textSize="@dimen/data_textSize"
+        />
+
+      <TextView
+        android:id="@+id/tv_pics"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="@dimen/viewListing_h2_spacing_bottom"
+        android:text="@string/photos_of"
+        android:textSize="@dimen/h2_textSize"/>
+      <android.support.v7.widget.RecyclerView
+        android:id="@+id/hostPics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+      <TextView
+        android:id="@+id/tv_reviewsRV"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h2_margin_top"
+        android:layout_marginBottom="@dimen/viewListing_h2_spacing_bottom"
+        android:text="@string/recent_reviews"
+        android:textSize="@dimen/h2_textSize"/>
+      <android.support.v7.widget.RecyclerView
+        android:id="@+id/reviewsRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+  </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

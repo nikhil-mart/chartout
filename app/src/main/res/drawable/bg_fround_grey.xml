@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:color="@color/grey800"
+  tools:targetApi="lollipop"
+  >
+
+  <item android:id="@android:id/mask">
+    <shape android:shape="rectangle">
+      <solid android:color="@color/grey800"/>
+      <corners android:radius="33dp"/>
+    </shape>
+  </item>
+  <item
+    android:id="@android:id/background">
+    <shape
+      android:padding="0dp"
+      android:shape="rectangle">
+      <!-- you can use any color you want I used here gray color-->
+      <solid android:color="@color/grey300"/>
+      <corners android:radius="33dp"/>
+    </shape>
+  </item>
+
+</ripple>

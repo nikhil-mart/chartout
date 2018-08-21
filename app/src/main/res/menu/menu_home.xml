@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item
+    android:id="@+id/action_home"
+    android:icon="@drawable/ic_home"
+    android:orderInCategory="100"
+    android:title="@string/action_home"
+    app:showAsAction="ifRoom"/>
+  <item
+    android:id="@+id/action_filter"
+    android:icon="@drawable/ic_map"
+    android:orderInCategory="100"
+    android:title="Map"
+    app:showAsAction="ifRoom"/>
+  <item
+    android:id="@+id/action_heart"
+    android:icon="@drawable/ic_heart"
+    android:orderInCategory="100"
+    android:title="Favorites"
+    app:showAsAction="ifRoom"/>
+  <item
+    android:id="@+id/action_chat"
+    android:icon="@drawable/ic_chat"
+    android:orderInCategory="100"
+    android:title="@string/action_chat"
+    app:showAsAction="ifRoom"/>
+  <item
+    android:id="@+id/action_settings"
+    android:icon="@drawable/ic_menu"
+    android:orderInCategory="100"
+    android:title="@string/action_settings"
+    app:showAsAction="ifRoom"/>
+</menu>

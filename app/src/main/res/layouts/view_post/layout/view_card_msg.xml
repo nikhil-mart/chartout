@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  app:cardCornerRadius="0dp"
+  android:layout_marginTop="@dimen/margin_section_card"
+  >
+
+  <android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical">
+    <TextView
+      android:id="@+id/tv"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Have a query or suggestion?"
+      android:textSize="16sp"
+      android:gravity="center"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"/>
+    <Button
+      android:id="@+id/btnReview"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:text="Write a review"
+      android:textColor="@color/grey600"
+      android:textAllCaps="false"
+      android:minHeight="0dp"
+      android:paddingTop="6dp"
+      android:paddingBottom="6dp"
+      android:layout_marginRight="10dp"
+      android:layout_marginLeft="20dp"
+      android:background="@drawable/bg_fround_white"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tv"
+      app:layout_constraintRight_toLeftOf="@id/btnMsg"
+      android:layout_marginTop="12dp"/>
+    <Button
+      android:id="@+id/btnMsg"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:minHeight="0dp"
+      android:paddingTop="6dp"
+      android:paddingBottom="6dp"
+      android:layout_marginRight="20dp"
+      android:layout_marginLeft="10dp"
+      android:text="Send a Message"
+      android:textAllCaps="false"
+      android:textColor="@color/mast"
+      android:background="@drawable/bg_fround_trans_mast"
+      app:layout_constraintLeft_toRightOf="@id/btnReview"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="@id/btnReview"
+      app:layout_constraintBottom_toBottomOf="@id/btnReview"/>
+  </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

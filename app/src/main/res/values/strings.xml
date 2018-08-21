@@ -1,0 +1,64 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <string tools:override="true" name="app_name">Chartout</string>
+
+  <string name="title_activity_main">MainActivity</string>
+
+  <string name="facebook_app_id">139729536900879</string>
+  <string name="fb_login_protocol_scheme">fb139729536900879</string>
+
+  <integer name="DefaultRadius">25</integer>
+  <string name="tv_radius">%d km</string>
+
+  <!--Bottom NavBar Texts-->
+
+  <string name="action_home">Home</string>
+  <string name="action_chat">Chat</string>
+  <string name="action_new">Create</string>
+  <string name="action_bell">Bell</string>
+  <string name="action_settings">Settings</string>
+  <string name="change">Change</string>
+  <string name="filter">Filter</string>
+
+  <!--Login SignUp-->
+
+  <string name="email">Email</string>
+  <string name="password">Password</string>
+  <string name="login">Login</string>
+  <string name="no_account_str">Don\'t have an account?</string>
+  <string name="register">Register</string>
+
+  <!-- Home Page -->
+
+  <string name="place">Place</string>
+  <string name="activity">Activity</string>
+
+  <string name="location_str">Location</string>
+  <string name="default_location">Unknown</string>
+  <string name="radius">Radius</string>
+  <string name="select_date">Select Date</string>
+  <string name="all">All</string>
+
+  <string name="home_text1">Explore places and experience activities around you</string>
+  <string name="home_text2">Activity around you</string>
+  <string name="view_all">View All</string>
+  <string name="home_cat_title1">Discover activity by category</string>
+  <string name="home_cat_title2">Discover places by occasion</string>
+  <string name="postCard_Image_Description">Main Post Image</string>
+  <string name="per_person">/per person</string>
+  <string name="login_fb">Log in with Facebook</string>
+  <string name="login_google">Log in with google</string>
+  <string name="signup_email">Sign Up with email</string>
+  <string name="login_email">Log in with email</string>
+
+
+  <string name="lorem_ipsem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue rhoncus justo ac facilisis. Nam placerat maximus libero et tempus. Phasellus vitae est libero. Etiam finibus ante magna, quis tincidunt ipsum pharetra in. Nulla at porta nisl. Praesent tristique sodales maximus. Duis sodales nibh a interdum fringilla. Quisque sollicitudin at felis tristique imperdiet. Nunc interdum enim a tortor vestibulum viverra. Aenean pretium turpis orci, in tincidunt erat efficitur sollicitudin. Nullam sit amet porttitor leo. Integer lectus lectus, malesuada fermentum scelerisque nec, tincidunt non ligula. Fusce in condimentum metus.</string>
+  <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue rhoncus justo ac facilisis. Nam placerat maximus libero et tempus. Phasellus vitae est libero. Etiam finibus ante magna, quis tincidunt ipsum pharetra in. Nulla at porta nisl. Praesent tristique sodales maximus. Duis sodales nibh a interdum fringilla. Quisque sollicitudin at felis tristique imperdiet. Nunc interdum enim a tortor vestibulum viverra. </string>
+  <string name="ipsem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue rhoncus justo ac facilisis. Nam placerat maximus libero et tempus. Phasellus vitae est libero. </string>
+
+  <string name="rupee_price">₹ %d</string>
+
+  <string name="preview">Preview</string>
+  <string name="name">Name</string>
+
+</resources>

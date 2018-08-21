@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:paddingTop="18dp"
+  android:paddingBottom="8dp"
+  android:paddingLeft="@dimen/content_margin_lr"
+  android:paddingRight="@dimen/content_margin_lr"
+  android:clipToPadding="false"
+  >
+
+  <TextView
+    android:id="@+id/title"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:text="Successfully Published!"
+    android:textColor="@color/black"
+    android:textSize="20sp"
+    app:layout_constraintBottom_toTopOf="@id/content"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <TextView
+    android:id="@+id/content"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:paddingTop="4dp"
+    android:paddingBottom="16dp"
+    android:lineSpacingExtra="3dp"
+    android:text="Your post was sucessfully created"
+    android:textSize="16sp"
+    app:layout_constraintBottom_toTopOf="@id/line"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/title"/>
+
+  <View
+    android:id="@+id/line"
+    android:layout_width="0dp"
+    android:layout_height="1dp"
+    android:layout_marginLeft="-18dp"
+    android:layout_marginRight="-18dp"
+    android:background="@color/line_color"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/content"/>
+
+  <Button
+    android:id="@+id/btn_Negative"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:background="@android:color/transparent"
+    android:minHeight="0dp"
+    android:text="cancel"
+    android:textColor="@color/grey600"
+    android:visibility="gone"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/line"
+    />
+  <Button
+    android:id="@+id/btn_ok"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:paddingLeft="26dp"
+    android:paddingRight="26dp"
+    android:layout_marginRight="20dp"
+    android:background="@android:color/transparent"
+    android:minHeight="0dp"
+    android:text="dismiss"
+    android:textColor="@color/grey600"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toLeftOf="@id/btn_neutral"
+    app:layout_constraintTop_toBottomOf="@id/line"
+    />
+  <Button
+    android:id="@+id/btn_neutral"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:background="@android:color/transparent"
+    android:minHeight="0dp"
+    android:text="View Created Posts"
+
+    android:textColor="@color/mast"
+    app:layout_constraintLeft_toRightOf="@id/btn_ok"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/line"
+    />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".settings.ChangeMobileNum">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="12dp"
+    android:orientation="vertical">
+
+    <Spinner
+      android:id="@+id/manageSpinner"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginLeft="9dp"
+      android:layout_marginRight="9dp"
+      android:background="@drawable/bg_rect_trans"
+      android:minHeight="32dp"
+      />
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+          android:id="@+id/recycler"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:paddingTop="9dp"
+          android:paddingLeft="9dp"
+          android:paddingRight="9dp"
+          android:orientation="vertical"/>
+
+      </android.support.v4.widget.SwipeRefreshLayout>
+
+      <TextView
+        android:id="@+id/greyOut"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/content_margin_lr"
+        android:background="@color/black_trans125"
+        android:gravity="center"
+        android:text="No requests found"
+        android:textColor="@color/white_70"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
+    </FrameLayout>
+
+  </LinearLayout>
+</FrameLayout>

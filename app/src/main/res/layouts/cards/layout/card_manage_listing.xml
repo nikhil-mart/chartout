@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_margin="2dp"
+  android:theme="@style/PostCardTheme">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/postCard_padding"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+      android:id="@+id/post_Container"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:clickable="true"
+      android:focusable="true">
+
+      <ImageView
+        android:id="@+id/post_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1.777"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/postCard_Image_Description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder"/>
+
+      <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:text="Dive in cold water with coach"
+        android:textColor="@color/mast"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/post_image"
+        tools:ignore="MissingPrefix"/>
+
+      <TextView
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="Shivaji Nagar"
+        android:textColor="@color/grey600"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@id/title"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="8dp">
+
+      <Button
+        android:id="@+id/btn_Publish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:background="@drawable/bg_rect_green"
+        android:minHeight="0dp"
+        android:text="Published"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/btn_Edit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+      <Button
+        android:id="@+id/btn_Edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/postCard_padding"
+        android:layout_marginBottom="3dp"
+        android:layout_marginRight="4dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:background="@drawable/bg_rect_trans_padding"
+        android:minHeight="0dp"
+        android:text="Edit"
+        android:textAllCaps="false"
+        android:textColor="@color/grey600"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_Delete"/>
+
+      <Button
+        android:id="@+id/btn_Delete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:background="@drawable/bg_rect_trans_red"
+        android:minHeight="0dp"
+        android:text="Delete"
+        android:textAllCaps="false"
+        android:textColor="@color/redAccent"
+        app:layout_constraintBottom_toBottomOf="@id/btn_Edit"
+        app:layout_constraintLeft_toRightOf="@id/btn_Edit"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_Edit"
+        />
+    </android.support.constraint.ConstraintLayout>
+
+  </LinearLayout>
+
+</android.support.v7.widget.CardView>
